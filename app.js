@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 app.use('/api/auth', require('./routes/auth.routes'))
 
-const PORT = config.get('port') || 3000
+const PORT = config.get('port') || 5000
 
 async function start(){
     try {
@@ -19,13 +19,13 @@ async function start(){
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
-        })
+        });
 
         
-        app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
+        app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`));
     } catch (e) {
-        console.log('Server Error', e.message)
-        process.exitCode = 1;
+        console.log('Server Error', e.message);
+        process.exit(1);
     }
 }
 
