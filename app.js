@@ -15,11 +15,11 @@ const PORT = config.get('port') || 5000
 
 async function start(){
     try {
-        /*await mongoose.connect(config.get('mongoUri'), {
+        await mongoose.connect('mongodb+srv://alexey:123@cluster0-j025e.gcp.mongodb.net/app?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
-        });*/
+        });
 
         
         app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`));
@@ -30,7 +30,6 @@ async function start(){
 }
 
 start()
-/*mongoose.connection.on('connected', () =>{
+mongoose.connection.on('connected', () =>{
     console.log('Успешное подключение к БД!');
 })
-*/

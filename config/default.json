@@ -1,6 +1,6 @@
 {
   "port": 5000,
-  "mongoUri": "mongodb://localhost:27017/mern",
+  "mongoUri": "mongodb+srv://alexey:123@cluster0-j025e.gcp.mongodb.net/test?retryWrites=true&w=majority",
   "mongoSecret": "123456",
   "jwtSecret": "catdog is little catdog"
 }
